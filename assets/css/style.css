@@ -1,0 +1,23 @@
+#background {
+    opacity: 1.0;
+}
+
+#header {
+    background-color: orange;
+    font-size: 30px;
+    -webkit-text-fill-color: white;
+}
+
+/* Create a border with margin/padding around the Instructions box */
+
+#instructions {
+    padding: 10px;
+    background-color: solid white;
+    display: block;
+    -webkit-text-fill-color: red;
+    text-emphasis: bold;
+}
+
+.inline {
+    display: flex;
+}
