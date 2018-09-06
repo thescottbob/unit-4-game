@@ -1,41 +1,63 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-us">
 
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Crystals Collector!</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Crystal Code!</title>
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
-    <script src="assets/javascript/game.js"></script>
 </head>
 
-<body background="https://images.freecreatives.com/wp-content/uploads/2016/04/Amazing-Blue-3D-Crystal-Wallpaper.jpg" id="background">
+<body background="https://images.freecreatives.com/wp-content/uploads/2016/04/Amazing-Blue-3D-Crystal-Wallpaper.jpg">
 
-    <div><button><h1 id="header">CrystalsCollector!</h1></button></div>
+    <div><button><h1>Crystals Collector!</h1></button></div>
 
     <br><br>
 
-    <div id="instructions">
+    <section>
 
-        <p>You will be given a random number at the start of the game.</p><br>
+        <div id="instructions" class="randomNum">
 
-        <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p><br>
+            <p>You will be given a random number at the start of the game.</p><br>
 
-        <p>You win the game by matching your total score to random number; you lose the game if your total score goes above the random number.</p><br>
+            <p>There are four crystals below. By clicking on a crystal you will add a specific<br> amount of points to your
+                total score.</p><br>
 
-        <p>The value of each crystal is hidden from you until you click on it.</p><br>
+            <p>You win the game by matching your total score to random number; you lose the<br> game if your total score
+                goes above the random number.</p><br>
 
-        <p>Each time when the game starts, the game will change the value of each crystal.</p>
+            <p>The value of each crystal is hidden from you until you click on it.</p><br>
 
-    </div>
+            <p>Each time when the game starts, the game will change the value of each crystal.</p>
+
+        </div>
+
+    </section>
+
+    <!--Using the randomNum class, set the value of each crystal to a random number between 1 and 12 
+        at the start of each round-->
+
+
+    <!--Create two more (inline) boxes- the first for recording the total gem value needed (randomly generated) 
+        and the second for recording the user's Win & Loss count-->
+
+    <section class="box">
+        <p id="randomCrystalValue">39</p>
+    </section>
+
+    <section class="box">
+        <p id="scoreCount">
+            Wins: 0<br> Losses: 0
+        </p>
+    </section>
 
     <div class="inline">
-        
+
         <div>
             <button><img src="https://cdn.shopify.com/s/files/1/1940/8677/products/Sapphire-Yellow__Octagon_640x640.jpg?v=1517986485"
-            alt=Yellow_Crystal width=75px height=90px></button>
+                    alt=Yellow_Crystal width=75px height=90px></button>
         </div>
 
         <div>
@@ -44,16 +66,24 @@
 
         <div>
             <button><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeMettiUY0sDs5NlcX_umma5Wxjvxi0AP5QTQzNtuGU6qRjwYsAA"
-            alt=Red_Crystal width=75px height=90px></button>
+                    alt=Red_Crystal width=75px height=90px></button>
         </div>
 
         <div>
             <button><img src="https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX5753664.jpg" alt=Blue_Crystal width=75px
-            height=90px></button>
+                    height=90px></button>
         </div>
 
     </div>
 
+    <!--Create another box to display the total gem count (user's guesses added together)-->
+    <section>
+        <p class="indent">Your Total Score</p>
+    </section>
+
+    <!--If user wins, wins++; if user loses, losses++-->
+
+    <script src="game.js"></script>
 </body>
 
 </html>

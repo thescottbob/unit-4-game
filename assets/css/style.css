@@ -1,11 +1,13 @@
-#background {
-    opacity: 1.0;
+/* All <div>s are spaced apart by a margin of 10 px */
+* {
+    margin: 10px;
 }
 
-#header {
+h1 {
     background-color: orange;
     font-size: 30px;
-    -webkit-text-fill-color: white;
+    -webkit-text-fill-color: white; 
+    padding: 10px;
 }
 
 /* Create a border with margin/padding around the Instructions box */
@@ -14,10 +16,43 @@
     padding: 10px;
     background-color: solid white;
     display: block;
-    -webkit-text-fill-color: red;
+    -webkit-text-fill-color:green;
     text-emphasis: bold;
 }
 
 .inline {
     display: flex;
+}
+
+.randomNum {
+    background-color: solid white;
+    padding: 10px;
+}
+
+section {
+    background-color: white;
+    display: inline-block;
+    margin: 10px;
+}
+
+p.indent{ 
+    padding-left: 14em;
+    padding-right: 14em;
+    background-color: white;
+    -webkit-text-fill-color:green;
+    float: right;
+}
+
+#randomCrystalValue {
+    background-color: green;
+}
+
+#scoreCount {
+    background-color: yellow;
+}
+
+.box {
+  float: left;
+  width: 15%;
+  padding: 20px;
 }
