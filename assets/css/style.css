@@ -1,58 +1,81 @@
-/* All <div>s are spaced apart by a margin of 10 px */
+/* All HTML elements are spaced apart by a margin of 10px */
 * {
-    margin: 10px;
+  margin: 10px;
 }
 
+/* Specs for page header */
 h1 {
-    background-color: orange;
-    font-size: 30px;
-    -webkit-text-fill-color: white; 
-    padding: 10px;
+  background-color: orange;
+  font-size: 30px;
+  -webkit-text-fill-color: white;
+  padding: 10px;
 }
 
-/* Create a border with margin/padding around the Instructions box */
-
+/* Specs for the instruction box */
 #instructions {
-    padding: 10px;
-    background-color: solid white;
-    display: block;
-    -webkit-text-fill-color:green;
-    text-emphasis: bold;
+  padding: 10px;
+  text-emphasis: bold;
+  background-color: white;
 }
 
+/* Specs for the four crystal buttons */
 .inline {
-    display: flex;
+  display: flex;
 }
 
-.randomNum {
-    background-color: solid white;
-    padding: 10px;
-}
-
-section {
+/* Specs for the box displaying the randomly generated value */
+#randomValue {
+    position: absolute;
+    bottom: 80px;
+    left: 10px;
+    width: 300px;
+    height: 80px;
     background-color: white;
-    display: inline-block;
-    margin: 10px;
 }
 
-p.indent{ 
-    padding-left: 14em;
-    padding-right: 14em;
+/* Specs for the box displaying the user's Win/Loss record */
+#winLossRecord {
+    position: absolute;
+    bottom: 80px;
+    left: 320px;
+    width: 300px;
+    height: 80px;
     background-color: white;
-    -webkit-text-fill-color:green;
-    float: right;
 }
 
-#randomCrystalValue {
-    background-color: green;
+/* Specs for the box displaying the user's total score */
+#totalScoreCount {
+    position: absolute;
+    bottom: 20px;
+    left: 10px;
+    width: 610px;
+    height: 40px;
+    background-color: white;
 }
 
-#scoreCount {
-    background-color: yellow;
-}
+
+
+
 
 .box {
-  float: left;
+  display: flex;
   width: 15%;
   padding: 20px;
 }
+
+section {
+  background-color: white;
+  display: inline-block;
+  margin: 10px;
+}
+
+p.indent {
+  padding-left: 13em;
+  padding-right: 13em;
+  padding-bottom: 1em;
+  background-color: white;
+  -webkit-text-fill-color: green;
+  float: right;
+}
+
+

@@ -18,7 +18,7 @@
 
     <section>
 
-        <div id="instructions" class="randomNum">
+        <div id="instructions">
 
             <p>You will be given a random number at the start of the game.</p><br>
 
@@ -34,23 +34,6 @@
 
         </div>
 
-    </section>
-
-    <!--Using the randomNum class, set the value of each crystal to a random number between 1 and 12 
-        at the start of each round-->
-
-
-    <!--Create two more (inline) boxes- the first for recording the total gem value needed (randomly generated) 
-        and the second for recording the user's Win & Loss count-->
-
-    <section class="box">
-        <p id="randomCrystalValue">39</p>
-    </section>
-
-    <section class="box">
-        <p id="scoreCount">
-            Wins: 0<br> Losses: 0
-        </p>
     </section>
 
     <div class="inline">
@@ -76,10 +59,26 @@
 
     </div>
 
-    <!--Create another box to display the total gem count (user's guesses added together)-->
-    <section>
-        <p class="indent">Your Total Score</p>
-    </section>
+    <!--Create two more (inline) boxes- the first for recording the total gem value needed (randomly generated) 
+            and the second for recording the user's Win & Loss count-->
+    <div>
+        <p id="randomValue">39</p>
+    </div> 
+    
+    <div>
+        <p id="winLossRecord">
+            Wins: 0<br> Losses: 0
+        </p>
+    </div>
+
+    <div>
+        <p id="totalScoreCount">Your Total Score is:</p>
+    </div>
+
+
+
+    <!--Using the randomNum class, set the value of each crystal to a random number between 1 and 12 
+        at the start of each round-->
 
     <!--If user wins, wins++; if user loses, losses++-->
 
