@@ -5,7 +5,7 @@
 
 /* Specs for page header */
 h1 {
-  background-color: orange;
+  background-color: #999900;
   font-size: 30px;
   -webkit-text-fill-color: white;
   padding: 10px;
@@ -16,7 +16,7 @@ h1 {
   padding: 10px;
   margin: 10px;
   text-emphasis: bold;
-  background-color: lightskyblue;
+  background-color: #ff66ff;
   display: inline-block;
 }
 
@@ -28,31 +28,34 @@ h1 {
 /* Specs for the box displaying the randomly generated value */
 #randomValue {
     position: absolute;
-    bottom: 70px;
+    bottom: 90px;
     left: 10px;
     width: 310px;
     height: 80px;
+    font-size: 50px;
     background-color: yellow;
 }
 
 /* Specs for the box displaying the user's Win/Loss record */
 #winLossRecord {
     position: absolute;
-    bottom: 70px;
+    bottom: 90px;
     left: 330px;
     width: 310px;
     height: 80px;
-    background-color: green;
+    font-size: 20px;
+    background-color: #00ff80;
 }
 
 /* Specs for the box displaying the user's total score */
 #totalScoreCount {
     position: absolute;
-    bottom: 20px;
+    bottom: 40px;
     left: 10px;
     width: 630px;
     height: 40px;
-    background-color: red;
+    font-size: 20px;
+    background-color: #ff3333;
 }
 
 
