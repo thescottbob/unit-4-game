@@ -5,14 +5,14 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Crystal Code!</title>
+    <title>Crystal Crush</title>
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
 </head>
 
 <body background="https://images.freecreatives.com/wp-content/uploads/2016/04/Amazing-Blue-3D-Crystal-Wallpaper.jpg">
 
-    <div><button><h1>Crystals Collector!</h1></button></div>
+    <div><button><h1>Crystal Crush</h1></button></div>
 
     <br><br>
 
@@ -20,22 +20,25 @@
 
         <div id="instructions">
 
-            <p>You will be given a random number at the start of the game.</p><br>
+            <p>You will be given a random number at the start of the game (in yellow box).</p><br>
 
-            <p>There are four crystals below. By clicking on a crystal you will add a specific<br> amount of points to your
-                total score.</p><br>
+            <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points<br> 
+                to your total score.</p><br>
 
             <p>You win the game by matching your total score to random number; you lose the<br> game if your total score
                 goes above the random number.</p><br>
 
             <p>The value of each crystal is hidden from you until you click on it.</p><br>
 
-            <p>Each time when the game starts, the game will change the value of each crystal.</p>
+            <p>Each time when the game starts, the game will change the value of each crystal.</p><br>
+
+            <p>Ready ... set ... begin!</p>
 
         </div>
 
     </section>
 
+    <!--Div for all of the crystal buttons-->
     <div class="inline">
 
         <div>
@@ -59,28 +62,22 @@
 
     </div>
 
-    <!--Create two more (inline) boxes- the first for recording the total gem value needed (randomly generated) 
-            and the second for recording the user's Win & Loss count-->
+    <!--Div for recording the total gem value needed (randomly generated)-->
     <div>
-        <p id="randomValue">39</p>
+        <p id="randomValue"><strong>39</strong></p>
     </div> 
     
+    <!--Div for recording the user's Win & Loss count-->
     <div>
         <p id="winLossRecord">
-            Wins: 0<br> Losses: 0
+            <strong>Wins: 0<br> Losses: 0</strong>
         </p>
     </div>
 
+    <!--Div for recording the user's Total Score over all rounds-->
     <div>
-        <p id="totalScoreCount">Your Total Score is:</p>
+        <p id="totalScoreCount"><strong>Your Total Score is:</strong></p>
     </div>
-
-
-
-    <!--Using the randomNum class, set the value of each crystal to a random number between 1 and 12 
-        at the start of each round-->
-
-    <!--If user wins, wins++; if user loses, losses++-->
 
     <script src="game.js"></script>
 </body>

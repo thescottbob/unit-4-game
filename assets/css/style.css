@@ -14,8 +14,10 @@ h1 {
 /* Specs for the instruction box */
 #instructions {
   padding: 10px;
+  margin: 10px;
   text-emphasis: bold;
-  background-color: white;
+  background-color: lightskyblue;
+  display: inline-block;
 }
 
 /* Specs for the four crystal buttons */
@@ -26,21 +28,21 @@ h1 {
 /* Specs for the box displaying the randomly generated value */
 #randomValue {
     position: absolute;
-    bottom: 80px;
+    bottom: 70px;
     left: 10px;
-    width: 300px;
+    width: 310px;
     height: 80px;
-    background-color: white;
+    background-color: yellow;
 }
 
 /* Specs for the box displaying the user's Win/Loss record */
 #winLossRecord {
     position: absolute;
-    bottom: 80px;
-    left: 320px;
-    width: 300px;
+    bottom: 70px;
+    left: 330px;
+    width: 310px;
     height: 80px;
-    background-color: white;
+    background-color: green;
 }
 
 /* Specs for the box displaying the user's total score */
@@ -48,34 +50,10 @@ h1 {
     position: absolute;
     bottom: 20px;
     left: 10px;
-    width: 610px;
+    width: 630px;
     height: 40px;
-    background-color: white;
+    background-color: red;
 }
 
-
-
-
-
-.box {
-  display: flex;
-  width: 15%;
-  padding: 20px;
-}
-
-section {
-  background-color: white;
-  display: inline-block;
-  margin: 10px;
-}
-
-p.indent {
-  padding-left: 13em;
-  padding-right: 13em;
-  padding-bottom: 1em;
-  background-color: white;
-  -webkit-text-fill-color: green;
-  float: right;
-}
 
 
