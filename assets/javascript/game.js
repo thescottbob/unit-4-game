@@ -25,9 +25,28 @@ var totalScoreCount= 0;
 
 //If user clicks on any of the four crystal buttons, then select the value of that crystal & add it to 'Your Total Score'
 $("#Yellowcrystal").on("click", function() {
-  totalScoreCount + yellowCrystal;
-  return
+  totalScoreCount = totalScoreCount + yellowCrystal;
+  console.log(totalScoreCount);
+  $("#totalScoreCount").html(totalScoreCount);
 });
+
+$("#Greencrystal").on("click", function() {
+    totalScoreCount = totalScoreCount + greenCrystal;
+    console.log(totalScoreCount);
+    $("#totalScoreCount").html(totalScoreCount);
+  });
+
+  $("#Redcrystal").on("click", function() {
+    totalScoreCount = totalScoreCount + redCrystal;
+    console.log(totalScoreCount);
+    $("#totalScoreCount").html(totalScoreCount);
+  });
+
+  $("#Bluecrystal").on("click", function() {
+    totalScoreCount = totalScoreCount + blueCrystal;
+    console.log(totalScoreCount);
+    $("#totalScoreCount").html(totalScoreCount);
+  });
 
 //If user wins, wins++ and reset game; otherwise, losses++ and reset game
 
