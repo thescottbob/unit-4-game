@@ -59,31 +59,55 @@ if (scoreCount === randomNum) {
     //reset game;
   }
   else if(scoreCount > randomNum){
-      //alert("You lost");
-      console.log("working");
+    alert("You lost");
+    //reset game 
   }
 });
 
 $("#Greencrystal").on("click", function() {
-    scoreCount += greenCrystal;
-    console.log(totalScoreCount);
-    $("#totalScoreCount").html(scoreCount);
-    $(updatedScoreCount).push(scoreCount);
-  });
+  scoreCount += greenCrystal;
+  $("#totalScoreCount").html(scoreCount);
+  
+if (scoreCount === randomNum) {
+    wins++;
+    $("#wins").html(wins);
+    //reset game;
+  }
+  else if(scoreCount > randomNum){
+    alert("You lost");
+    //reset game 
+  }
+});
 
-  $("#Redcrystal").on("click", function() {
-    scoreCount += redCrystal;
-    console.log(scoreCount);
-    $("#totalScoreCount").html(scoreCount);
-    $(updatedScoreCount).push(scoreCount);
-  });
+$("#Redcrystal").on("click", function() {
+  scoreCount += redCrystal;
+  $("#totalScoreCount").html(scoreCount);
+  
+if (scoreCount === randomNum) {
+    wins++;
+    $("#wins").html(wins);
+    //reset game;
+  }
+  else if(scoreCount > randomNum){
+    alert("You lost");
+    //reset game 
+  }
+});
 
-  $("#Bluecrystal").on("click", function() {
-    scoreCount += blueCrystal;
-    console.log(scoreCount);
-    $("#totalScoreCount").html(scoreCount);
-    $(scoreCount).push(scoreCount);
-  });
+$("#Bluecrystal").on("click", function() {
+  scoreCount += blueCrystal;
+  $("#totalScoreCount").html(scoreCount);
+  
+if (scoreCount === randomNum) {
+    wins++;
+    $("#wins").html(wins);
+    //reset game;
+  }
+  else if(scoreCount > randomNum){
+    alert("You lost");
+    //reset game 
+  }
+});
 
 
 //If user wins, wins++ and reset game
