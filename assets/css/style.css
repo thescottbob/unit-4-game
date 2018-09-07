@@ -26,37 +26,38 @@ h1 {
 
 /* Specs for the box displaying the randomly generated value */
 #randomValue {
-    position: absolute;
-    bottom: 90px;
-    left: 10px;
-    width: 310px;
-    height: 80px;
-    font-size: 50px;
-    background-color: yellow;
+  position: absolute;
+  bottom: 90px;
+  left: 10px;
+  width: 310px;
+  height: 80px;
+  font-size: 50px;
+  background-color: yellow;
 }
 
 /* Specs for the box displaying the user's Win/Loss record */
 #totalScoreCount {
-    position: absolute;
-    bottom: 90px;
-    left: 330px;
-    width: 310px;
-    height: 80px;
-    font-size: 50px;
-    background-color: #ff3333;
+  position: absolute;
+  bottom: 90px;
+  left: 330px;
+  width: 310px;
+  height: 80px;
+  font-size: 50px;
+  background-color: #ff3333;
 }
 
 /* Specs for the box displaying the user's total score */
 #winLossRecord {
-    position: absolute;
-    bottom: 30px;
-    left: 10px;
-    width: 630px;
-    height: 50px;
-    font-size: 25px;
-    background-color: #00ff80;
+  position: absolute;
+  bottom: 30px;
+  left: 10px;
+  width: 630px;
+  height: 50px;
+  font-size: 25px;
+  background-color: #00ff80;
 }
 
-
-
-
+#PlayAgain {
+  font-size: 33px;
+  background-color: goldenrod;
+}
