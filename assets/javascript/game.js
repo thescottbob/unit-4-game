@@ -22,12 +22,14 @@ console.log(randomNum);
 //Set the initial totalScoreCount equal to 0
 
 var totalScoreCount= 0;
+var updatedScoreCount;
 
-//If user clicks on any of the four crystal buttons, then select the value of that crystal & add it to 'Your Total Score'
+//If user clicks on any of the four crystal buttons, then select the value of that crystal & add it to totalScoreCount
 $("#Yellowcrystal").on("click", function() {
   totalScoreCount = totalScoreCount + yellowCrystal;
   console.log(totalScoreCount);
   $("#totalScoreCount").html(totalScoreCount);
+  $(updatedScoreCount).push(totalScoreCount);
 });
 
 $("#Greencrystal").on("click", function() {
@@ -48,15 +50,27 @@ $("#Greencrystal").on("click", function() {
     $("#totalScoreCount").html(totalScoreCount);
   });
 
-//If user wins, wins++ and reset game; otherwise, losses++ and reset game
+//Declaring two variable to track (and set the initial values of) the wins and losses of the user
 
-if (totalScoreCount == randomNum) {
+var wins= 0;
+var losses= 0;
+
+
+//If user wins, wins++ and reset game
+
+if (updatedScoreCount == randomNum) {
   wins++;
+  $("#wins").html(wins);
   //reset game;
 }
 
-if (totalScoreCount > randomNum) {
+//If user loses, losses++ and reset game
+
+if (updatedScoreCount > randomNum) {
   losses++;
+  console.log(updatedScoreCount);
+  console.log(losses);
+  $("#losses").html(losses);
   //reset game;
 }
 

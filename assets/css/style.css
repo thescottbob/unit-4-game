@@ -32,30 +32,30 @@ h1 {
     left: 10px;
     width: 310px;
     height: 80px;
-    font-size: 30px;
+    font-size: 50px;
     background-color: yellow;
 }
 
 /* Specs for the box displaying the user's Win/Loss record */
-#winLossRecord {
+#totalScoreCount {
     position: absolute;
     bottom: 90px;
     left: 330px;
     width: 310px;
     height: 80px;
-    font-size: 20px;
-    background-color: #00ff80;
+    font-size: 50px;
+    background-color: #ff3333;
 }
 
 /* Specs for the box displaying the user's total score */
-#totalScoreCount {
+#winLossRecord {
     position: absolute;
-    bottom: 40px;
+    bottom: 30px;
     left: 10px;
     width: 630px;
-    height: 40px;
-    font-size: 30px;
-    background-color: #ff3333;
+    height: 50px;
+    font-size: 25px;
+    background-color: #00ff80;
 }
 
 
