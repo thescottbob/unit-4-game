@@ -29,31 +29,31 @@ console.log(blueCrystal)
 //Log to the console for testing.
 
 var randomNum = Math.floor(Math.random() * Math.floor(120));
+  $("#randomValue").html(randomNum);
 if (randomNum < 12){
   randomNum = Math.floor(Math.random() * Math.floor(120));
+  $("#randomValue").html(randomNum);
 }
 console.log(randomNum);
 
 //Set the initial totalScoreCount equal to 0
 
-var totalScoreCount= 0;
+var scoreCount= 0;
 var updatedScoreCount= [];
 
 //If user clicks on any of the four crystal buttons, then select the value of that crystal & add it to totalScoreCount,
 //which will be rendered to the page.
 
 $("#Yellowcrystal").on("click", function() {
-  totalScoreCount += yellowCrystal;
-  console.log(totalScoreCount);
-  $("#totalScoreCount").html(totalScoreCount);
+  scoreCount += yellowCrystal;
+  $("#totalScoreCount").html(scoreCount);
   
-if (totalScoreCount == randomNum) {
-    console.log("first", first)
+if (scoreCount === randomNum) {
     wins++;
     $("#wins").html(wins);
     //reset game;
   }
-  else if(totalScoreCount > randomNum){
+  else if(scoreCount > randomNum){
       //alert("You lost");
       console.log("working");
   }
@@ -61,9 +61,9 @@ if (totalScoreCount == randomNum) {
 
 
 $("#Greencrystal").on("click", function() {
-    totalScoreCount += greenCrystal;
+    scoreCount += greenCrystal;
     console.log(totalScoreCount);
-    $("#totalScoreCount").html(totalScoreCount);
+    $("#totalScoreCount").html(coreCount);
     $(updatedScoreCount).push(totalScoreCount);
   });
 
