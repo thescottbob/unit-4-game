@@ -46,8 +46,8 @@ var updatedScoreCount= [];
 var wins= "0";
 var losses= "0";
 
-//If user clicks on any of the four crystal buttons, then select the value of that crystal & add it to scoreCount,
-//which will be rendered to the page.
+//When user clicks on the yellow crystal, the scoreCount is updated according to the crystal's value and displayed to the page. Then, we check
+//to see whether the use won or lost, add to their win/loss record accordingly, and reset the game.
 
 $("#Yellowcrystal").on("click", function() {
   scoreCount += yellowCrystal;
@@ -64,6 +64,10 @@ if (scoreCount === randomNum) {
   }
 });
 
+//When user clicks on the green crystal, the scoreCount is updated according to the crystal's value and displayed to the page. Then, we check
+//to see whether the use won or lost, add to their win/loss record accordingly, and reset the game.
+
+
 $("#Greencrystal").on("click", function() {
   scoreCount += greenCrystal;
   $("#totalScoreCount").html(scoreCount);
@@ -78,6 +82,9 @@ if (scoreCount === randomNum) {
     //reset game 
   }
 });
+
+//When user clicks on the red crystal, the scoreCount is updated according to the crystal's value and displayed to the page. Then, we check
+//to see whether the use won or lost, add to their win/loss record accordingly, and reset the game.
 
 $("#Redcrystal").on("click", function() {
   scoreCount += redCrystal;
@@ -94,6 +101,9 @@ if (scoreCount === randomNum) {
   }
 });
 
+//When user clicks on the blue crystal, the scoreCount is updated according to the crystal's value and displayed to the page. Then, we check
+//to see whether the use won or lost, add to their win/loss record accordingly, and reset the game.
+
 $("#Bluecrystal").on("click", function() {
   scoreCount += blueCrystal;
   $("#totalScoreCount").html(scoreCount);
@@ -108,24 +118,3 @@ if (scoreCount === randomNum) {
     //reset game 
   }
 });
-
-
-//If user wins, wins++ and reset game
-
-if (updatedScoreCount === randomNum) {
-  wins++;
-  $("#wins").html(wins);
-  //reset game;
-}
-
-//If user loses, losses++ and reset game
-
-if (updatedScoreCount > randomNum) {
-  losses++;
-  console.log(updatedScoreCount);
-  console.log(losses);
-  $("#losses").html(losses);
-  //reset game;
-}
-
-//Come up with a way to reset the game. What does 'reset game' mean? 5 new randomly generated numbers...
