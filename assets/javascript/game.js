@@ -1,53 +1,81 @@
-//Set the value of each crystal to a random number between 0 and 12 at the start of each round.
-//If random value = 0, then select a new random value. Log each value in the console for testing.
+//Set the value of each crystal to a random number between 0 and 12 at the start of each round. 
+  var yellowCrystal = Math.floor(Math.random() * Math.floor(12));
+  var greenCrystal = Math.floor(Math.random() * Math.floor(12));
+  var redCrystal = Math.floor(Math.random() * Math.floor(12));
+  var blueCrystal = Math.floor(Math.random() * Math.floor(12));
 
-var yellowCrystal = Math.floor(Math.random() * Math.floor(12));
-if (yellowCrystal === 0){
-    yellowCrystal = Math.floor(Math.random() * Math.floor(12));
-}
-console.log(yellowCrystal)
-
-var greenCrystal = Math.floor(Math.random() * Math.floor(12));
-if (greenCrystal === 0){
-    greenCrystal = Math.floor(Math.random() * Math.floor(12));
-}
-console.log(greenCrystal)
-
-var redCrystal = Math.floor(Math.random() * Math.floor(12));
-if (redCrystal === 0){
-    redCrystal = Math.floor(Math.random() * Math.floor(12));
-}
-console.log(redCrystal)
-
-var blueCrystal = Math.floor(Math.random() * Math.floor(12));
-if (blueCrystal === 0){
-    blueCrystal = Math.floor(Math.random() * Math.floor(12));
-}
-console.log(blueCrystal)
-
-//Set the value of the randomNum between 0 and 120 at the start of each round. If random value is less than 12, then select a new random value. 
-//Log to the console for testing, and display to the HTML.
-
-var randomNum = Math.floor(Math.random() * Math.floor(120));
+//Set the value of the randomNum between 0 and 120 at the start of each round.
+  var randomNum = Math.floor(Math.random() * Math.floor(120));
   $("#randomValue").html(randomNum);
-if (randomNum < 12){
-  randomNum = Math.floor(Math.random() * Math.floor(120));
-  $("#randomValue").html(randomNum);
-}
-console.log(randomNum);
 
-//Set the initial scoreCount equal to 0
+//If any of the crystal values equal 0, then select a new random value for that crystal. If the 
+//value of randomNum is less than 12, then select a new random value and display to the HTML.
 
-var scoreCount= 0;
-var updatedScoreCount= [];
+    if (yellowCrystal === 0){
+        yellowCrystal = Math.floor(Math.random() * Math.floor(12));
+    }
+
+    if (greenCrystal === 0){
+        greenCrystal = Math.floor(Math.random() * Math.floor(12));
+    }
+    
+    if (redCrystal === 0){
+        redCrystal = Math.floor(Math.random() * Math.floor(12));
+    }
+
+    if (blueCrystal === 0){
+        blueCrystal = Math.floor(Math.random() * Math.floor(12));
+    }
+
+    if (randomNum < 12){
+        randomNum = Math.floor(Math.random() * Math.floor(120));
+        $("#randomValue").html(randomNum);
+    };
+
+//After the above code has ran, store it within a function to be called again (resetting the game) when the user wins or loses.
+
+function beginGame() {
+    var yellowCrystal = Math.floor(Math.random() * Math.floor(12));
+    var greenCrystal = Math.floor(Math.random() * Math.floor(12));
+    var redCrystal = Math.floor(Math.random() * Math.floor(12));
+    var blueCrystal = Math.floor(Math.random() * Math.floor(12));
+
+    var randomNum = Math.floor(Math.random() * Math.floor(120));
+
+      $("#totalScoreCount").html("0");
+
+      if (yellowCrystal === 0){
+          yellowCrystal = Math.floor(Math.random() * Math.floor(12));
+      }
+
+      if (greenCrystal === 0){
+          greenCrystal = Math.floor(Math.random() * Math.floor(12));
+      }
+      
+      if (redCrystal === 0){
+          redCrystal = Math.floor(Math.random() * Math.floor(12));
+      }
+
+      if (blueCrystal === 0){
+          blueCrystal = Math.floor(Math.random() * Math.floor(12));
+      }
+
+      if (randomNum < 12){
+          randomNum = Math.floor(Math.random() * Math.floor(120));
+          $("#randomValue").html(randomNum);
+      };
+  }
 
 //Declaring two variables to track (and set the initial values of) the wins and losses of the user
 
-var wins= "0";
-var losses= "0";
+var wins= 0;
+var losses= 0;
+
+//Declaring a variable to track the user's score count
+var scoreCount=0;
 
 //When user clicks on the yellow crystal, the scoreCount is updated according to the crystal's value and displayed to the page. Then, we check
-//to see whether the use won or lost, add to their win/loss record accordingly, and reset the game.
+//to see whether the user won or lost, add to their win/loss record accordingly, and reset the game.
 
 $("#Yellowcrystal").on("click", function() {
   scoreCount += yellowCrystal;
@@ -56,11 +84,14 @@ $("#Yellowcrystal").on("click", function() {
 if (scoreCount === randomNum) {
     wins++;
     $("#wins").html(wins);
-    //reset game;
+    alert("You won!");
+    beginGame();
   }
   else if(scoreCount > randomNum){
-    alert("You lost");
-    //reset game 
+    losses++;
+    $("#losses").html(losses);
+    alert("You lost...");
+    beginGame();
   }
 });
 
@@ -75,11 +106,14 @@ $("#Greencrystal").on("click", function() {
 if (scoreCount === randomNum) {
     wins++;
     $("#wins").html(wins);
-    //reset game;
+    alert("You won!");
+    beginGame();
   }
   else if(scoreCount > randomNum){
-    alert("You lost");
-    //reset game 
+    losses++;
+    $("#losses").html(losses);
+    alert("You lost...");
+    beginGame();
   }
 });
 
@@ -93,11 +127,14 @@ $("#Redcrystal").on("click", function() {
 if (scoreCount === randomNum) {
     wins++;
     $("#wins").html(wins);
-    //reset game;
+    alert("You won!");
+    beginGame();
   }
   else if(scoreCount > randomNum){
-    alert("You lost");
-    //reset game 
+    losses++;
+    $("#losses").html(losses);
+    alert("You lost...");
+    beginGame();
   }
 });
 
@@ -111,10 +148,13 @@ $("#Bluecrystal").on("click", function() {
 if (scoreCount === randomNum) {
     wins++;
     $("#wins").html(wins);
-    //reset game;
+    alert("You won!");
+    beginGame();
   }
   else if(scoreCount > randomNum){
-    alert("You lost");
-    //reset game 
+    losses++;
+    $("#losses").html(losses);
+    alert("You lost...");
+    beginGame();
   }
 });
