@@ -41,6 +41,11 @@ console.log(randomNum);
 var scoreCount= 0;
 var updatedScoreCount= [];
 
+//Declaring two variables to track (and set the initial values of) the wins and losses of the user
+
+var wins= "0";
+var losses= "0";
+
 //If user clicks on any of the four crystal buttons, then select the value of that crystal & add it to scoreCount,
 //which will be rendered to the page.
 
@@ -58,7 +63,6 @@ if (scoreCount === randomNum) {
       console.log("working");
   }
 });
-
 
 $("#Greencrystal").on("click", function() {
     scoreCount += greenCrystal;
@@ -81,10 +85,6 @@ $("#Greencrystal").on("click", function() {
     $(scoreCount).push(scoreCount);
   });
 
-//Declaring two variables to track (and set the initial values of) the wins and losses of the user
-
-var wins= "0";
-var losses= "0";
 
 //If user wins, wins++ and reset game
 
