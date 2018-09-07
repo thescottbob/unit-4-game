@@ -1,5 +1,6 @@
 //Set the value of each crystal to a random number between 0 and 12 at the start of each round.
 var yellowCrystal = Math.floor(Math.random() * Math.floor(12));
+console.log(yellowCrystal)
 var greenCrystal = Math.floor(Math.random() * Math.floor(12));
 var redCrystal = Math.floor(Math.random() * Math.floor(12));
 var blueCrystal = Math.floor(Math.random() * Math.floor(12));
@@ -44,6 +45,7 @@ if (randomNum < 12) {
 
 function beginGame() {
   var yellowCrystal = Math.floor(Math.random() * Math.floor(12));
+  console.log(yellowCrystal)
   var greenCrystal = Math.floor(Math.random() * Math.floor(12));
   var redCrystal = Math.floor(Math.random() * Math.floor(12));
   var blueCrystal = Math.floor(Math.random() * Math.floor(12));
@@ -87,11 +89,13 @@ $("#Yellowcrystal").on("click", function() {
     wins++;
     $("#wins").html(wins);
     alert("You won!");
+    scoreCount = 0;
     beginGame();
   } else if (scoreCount > randomNum) {
     losses++;
     $("#losses").html(losses);
     alert("You lost...");
+    scoreCount = 0;
     beginGame();
   }
 });
@@ -107,11 +111,13 @@ $("#Greencrystal").on("click", function() {
     wins++;
     $("#wins").html(wins);
     alert("You won!");
+    scoreCount = 0;
     beginGame();
   } else if (scoreCount > randomNum) {
     losses++;
     $("#losses").html(losses);
     alert("You lost...");
+    scoreCount = 0;
     beginGame();
   }
 });
@@ -127,11 +133,13 @@ $("#Redcrystal").on("click", function() {
     wins++;
     $("#wins").html(wins);
     alert("You won!");
+    scoreCount = 0;
     beginGame();
   } else if (scoreCount > randomNum) {
     losses++;
     $("#losses").html(losses);
     alert("You lost...");
+    scoreCount = 0;
     beginGame();
   }
 });
@@ -147,11 +155,13 @@ $("#Bluecrystal").on("click", function() {
     wins++;
     $("#wins").html(wins);
     alert("You won!");
+    scoreCount = 0;
     beginGame();
   } else if (scoreCount > randomNum) {
     losses++;
     $("#losses").html(losses);
     alert("You lost...");
+    scoreCount = 0;
     beginGame();
   }
 });
