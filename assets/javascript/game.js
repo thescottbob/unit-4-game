@@ -26,7 +26,7 @@ if (blueCrystal === 0){
 console.log(blueCrystal)
 
 //Set the value of the randomNum between 0 and 120 at the start of each round. If random value is less than 12, then select a new random value. 
-//Log to the console for testing.
+//Log to the console for testing, and display to the HTML.
 
 var randomNum = Math.floor(Math.random() * Math.floor(120));
   $("#randomValue").html(randomNum);
@@ -36,12 +36,12 @@ if (randomNum < 12){
 }
 console.log(randomNum);
 
-//Set the initial totalScoreCount equal to 0
+//Set the initial scoreCount equal to 0
 
 var scoreCount= 0;
 var updatedScoreCount= [];
 
-//If user clicks on any of the four crystal buttons, then select the value of that crystal & add it to totalScoreCount,
+//If user clicks on any of the four crystal buttons, then select the value of that crystal & add it to scoreCount,
 //which will be rendered to the page.
 
 $("#Yellowcrystal").on("click", function() {
@@ -63,22 +63,22 @@ if (scoreCount === randomNum) {
 $("#Greencrystal").on("click", function() {
     scoreCount += greenCrystal;
     console.log(totalScoreCount);
-    $("#totalScoreCount").html(coreCount);
-    $(updatedScoreCount).push(totalScoreCount);
+    $("#totalScoreCount").html(scoreCount);
+    $(updatedScoreCount).push(scoreCount);
   });
 
   $("#Redcrystal").on("click", function() {
-    totalScoreCount += redCrystal;
-    console.log(totalScoreCount);
-    $("#totalScoreCount").html(totalScoreCount);
-    $(updatedScoreCount).push(totalScoreCount);
+    scoreCount += redCrystal;
+    console.log(scoreCount);
+    $("#totalScoreCount").html(scoreCount);
+    $(updatedScoreCount).push(scoreCount);
   });
 
   $("#Bluecrystal").on("click", function() {
-    totalScoreCount += blueCrystal;
-    console.log(totalScoreCount);
-    $("#totalScoreCount").html(totalScoreCount);
-    $(updatedScoreCount).push(totalScoreCount);
+    scoreCount += blueCrystal;
+    console.log(scoreCount);
+    $("#totalScoreCount").html(scoreCount);
+    $(scoreCount).push(scoreCount);
   });
 
 //Declaring two variables to track (and set the initial values of) the wins and losses of the user
@@ -88,7 +88,7 @@ var losses= "0";
 
 //If user wins, wins++ and reset game
 
-if (updatedScoreCount == randomNum) {
+if (updatedScoreCount === randomNum) {
   wins++;
   $("#wins").html(wins);
   //reset game;
