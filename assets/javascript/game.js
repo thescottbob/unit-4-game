@@ -1,32 +1,44 @@
-//Using the randomNum class, set the value of each crystal to a random number between 1 and 12 at the start of each round
+//Set the value of each crystal to a random number between 0 and 12 at the start of each round
 
-var yellowCrystal= Math.floor(Math.random() * Math.floor(12));
+var yellowCrystal = Math.floor(Math.random() * Math.floor(12));
 
-var greenCrystal= Math.floor(Math.random() * Math.floor(12));
+var greenCrystal = Math.floor(Math.random() * Math.floor(12));
 
-var redCrystal= Math.floor(Math.random() * Math.floor(12));
+var redCrystal = Math.floor(Math.random() * Math.floor(12));
 
-var blueCrystal= Math.floor(Math.random() * Math.floor(12));
+var blueCrystal = Math.floor(Math.random() * Math.floor(12));
 
-console.log(yellowCrystal)
-console.log(greenCrystal)
-console.log(redCrystal)
-console.log(blueCrystal)
+console.log(yellowCrystal);
+console.log(greenCrystal);
+console.log(redCrystal);
+console.log(blueCrystal);
 
-var randomNum= Math.floor(Math.random() * Math.floor(120));
+//Set the value of the randomNum between 0 and 120 at the start of each round
 
-console.log(randomNum)
+var randomNum = Math.floor(Math.random() * Math.floor(120));
+
+console.log(randomNum);
+
+//Set the initial totalScoreCount equal to 0
+
+var totalScoreCount= 0;
+
+//If user clicks on any of the four crystal buttons, then select the value of that crystal & add it to 'Your Total Score'
+$("#Yellowcrystal").on("click", function() {
+  totalScoreCount + yellowCrystal;
+  return
+});
 
 //If user wins, wins++ and reset game; otherwise, losses++ and reset game
 
-if(totalScoreCount==randomValue) {
-    wins++;
-    //reset game;
+if (totalScoreCount == randomNum) {
+  wins++;
+  //reset game;
 }
 
-if(totalScoreCount>randomValue) {
-    losses++;
-    //reset game;
+if (totalScoreCount > randomNum) {
+  losses++;
+  //reset game;
 }
 
 //Come up with a way to reset the game. What does 'reset game' mean? 5 new randomly generated numbers...

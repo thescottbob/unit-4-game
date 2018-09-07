@@ -8,6 +8,7 @@
     <title>Crystal Crush</title>
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
 <body background="https://images.freecreatives.com/wp-content/uploads/2016/04/Amazing-Blue-3D-Crystal-Wallpaper.jpg">
@@ -40,21 +41,21 @@
     <div class="inline">
 
         <div>
-            <button><img src="https://cdn.shopify.com/s/files/1/1940/8677/products/Sapphire-Yellow__Octagon_640x640.jpg?v=1517986485"
+            <button id="Yellowcrystal"><img src="https://cdn.shopify.com/s/files/1/1940/8677/products/Sapphire-Yellow__Octagon_640x640.jpg?v=1517986485"
                     alt=Yellow_Crystal width=75px height=90px></button>
         </div>
 
         <div>
-            <button><img src="http://www.kingstonegems.com/wp-content/uploads/ksg161a.jpg" alt=Green_Crystal width=75px height=90px></button>
+            <button id="Greencrystal"><img src="http://www.kingstonegems.com/wp-content/uploads/ksg161a.jpg" alt=Green_Crystal width=75px height=90px></button>
         </div>
 
         <div>
-            <button><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeMettiUY0sDs5NlcX_umma5Wxjvxi0AP5QTQzNtuGU6qRjwYsAA"
+            <button id="Redcrystal"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeMettiUY0sDs5NlcX_umma5Wxjvxi0AP5QTQzNtuGU6qRjwYsAA"
                     alt=Red_Crystal width=75px height=90px></button>
         </div>
 
         <div>
-            <button><img src="https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX5753664.jpg" alt=Blue_Crystal width=75px
+            <button id="Bluecrystal"><img src="https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX5753664.jpg" alt=Blue_Crystal width=75px
                     height=90px></button>
         </div>
 
@@ -74,7 +75,9 @@
 
     <!--Div for recording the user's Total Score over all rounds-->
     <div>
-        <p id="totalScoreCount"><strong>Your Total Score is:</strong></p>
+        <p id="totalScoreCount"><strong>Your Total Score is: 
+            <script>var scoreCount="0"</script>
+            0</strong></p>
     </div>
 
     <script src="assets/javascript/game.js"></script>
